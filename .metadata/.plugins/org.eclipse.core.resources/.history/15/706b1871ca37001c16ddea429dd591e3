@@ -1,0 +1,52 @@
+package Test;
+
+
+
+import java.util.ArrayList;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+import serietheque.Episode;
+
+@RunWith(Suite.class)
+@SuiteClasses({})
+
+
+public class AllTests {
+	public class Saison {
+	    private ArrayList<Episode> episodes = new ArrayList<>();
+
+
+	    public void addEpisode(Episode episode) {
+	        this.episodes.add(episode);
+	        
+	    }
+
+	    public int getDureeTotale() {
+	        int dureeTotale = 0;
+	        for (Episode episode : this.episodes) {
+	            dureeTotale = dureeTotale + episode.getDuree();
+	        }
+
+	        return dureeTotale;
+	    }
+
+	    public int nbEpisode() {
+	        return this.episodes.size();
+	    }
+
+	    public ArrayList<Episode> getEpisodes() {
+	        return episodes;
+	    }
+	}
+
+	}
+	
+	
+	
+	
+	
+
+}
