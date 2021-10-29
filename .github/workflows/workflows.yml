@@ -1,4 +1,5 @@
-name: Workflows
+
+name: Java CI
 
 on: [push]
 
