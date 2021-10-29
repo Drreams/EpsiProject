@@ -1,0 +1,17 @@
+name : Workflows
+
+on: push
+
+jobs:
+   workflows :
+   name : workflows code base
+   runs-on: ubuntu-latest
+   steps:
+    -name: checkout code
+    -uses: actions/checkout@v2
+    
+    -name: Run Workflows
+     uses: github/workflows@v3
+     env:
+        DEFAULT_BRANCH: test
+        GITHUB8TOKEN: ${{ secrets.GITHUB_TOKEN }}
